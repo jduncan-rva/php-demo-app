@@ -99,7 +99,7 @@ else {
 echo "</div>";
 }
 echo "<h3>Uploaded Files</h3>";
-$files = array_diff(scandir($target_dir), array('.', '..','uploads'));
+$files = array_diff(scandir($target_dir), array('.', '..','uploads','.trashcan'));
 foreach ($files as $f) {
   echo "<a href='uploads/$f'><img src='uploads/$f'/></a>";
 }
