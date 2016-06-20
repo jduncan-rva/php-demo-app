@@ -1,6 +1,6 @@
 <html>
 <head>
-<? php
+<?php
 $author = getenv('AUTHOR');
 $storage_type = getenv('STORAGE_TYPE');
 
