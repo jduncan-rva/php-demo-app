@@ -1,10 +1,10 @@
 <html>
 <head>
 <? php
-$author = getenv('AUTHOR')
-$storage_type = getenv('STORAGE_TYPE')
+$author = getenv('AUTHOR');
+$storage_type = getenv('STORAGE_TYPE');
 
-echo "<title>Image Library Demo Application by $author</title>";
+echo "<title>Image Library Demo Application by " . $author . "</title>";
 
 ?>
 <style>
@@ -52,7 +52,7 @@ img {
 </head>
 <body>
 <div id="body-wrapper">
-<?php echo "<h1>Image Library with $storage_type storage backend.</h1>" ?>
+<?php echo "<h1>Image Library with" . $storage_type . " storage backend.</h1>" ?>
 <div class="wrapper" id="upload-form">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
     Select image to upload:
