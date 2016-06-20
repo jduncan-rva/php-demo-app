@@ -1,6 +1,12 @@
 <html>
 <head>
-<title>Image Library Demo Application by Jamie Duncan</title>
+<? php
+$author = getenv('AUTHOR')
+$storage_type = getenv('STORAGE_TYPE')
+
+echo "<title>Image Library Demo Application by $author</title>";
+
+?>
 <style>
 body {
     background-color: lightgrey;
@@ -46,7 +52,7 @@ img {
 </head>
 <body>
 <div id="body-wrapper">
-<h1>My Image Library</h1>
+<?php echo "<h1>Image Library with $storage_type storage backend.</h1>" ?>
 <div class="wrapper" id="upload-form">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
     Select image to upload:
