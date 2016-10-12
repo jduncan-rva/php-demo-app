@@ -63,7 +63,7 @@ img {
 <?php
 $target_dir = "uploads/";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . strtolower(basename($_FILES["fileToUpload"]["name"]));
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
